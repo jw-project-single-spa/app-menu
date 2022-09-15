@@ -8,8 +8,17 @@ import {
   SidebarFooter,
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
+import { navigateToUrl } from "single-spa";
 
 export default function Root(props) {
+  const navigate1Teste = () => {
+    navigateToUrl("/");
+  };
+
+  const navigate2Teste = () => {
+    navigateToUrl("/grupos");
+  };
+
   return (
     <ProSidebar>
       <SidebarHeader>
@@ -32,8 +41,8 @@ export default function Root(props) {
         <Menu iconShape="square">
           <MenuItem icon={<>s</>}>Dashboard</MenuItem>
           <SubMenu title="Components" icon={<>a</>}>
-            <MenuItem>Component 1</MenuItem>
-            <MenuItem>Component 2</MenuItem>
+            <MenuItem onClick={navigate1Teste}>Component 1</MenuItem>
+            <MenuItem onClick={navigate2Teste}>Component 2</MenuItem>
           </SubMenu>
         </Menu>
       </SidebarContent>

@@ -11,6 +11,13 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    externals: ["@mui/material", "@emotion", "jotai", "moment"],
+    externals: [
+      "@mui/material",
+      "@emotion/react",
+      "@emotion/styled",
+      "jotai",
+      "moment",
+      /rxjs/,
+    ],
   });
 };
